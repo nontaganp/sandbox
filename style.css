@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@1&display=swap');
+
+img{
+    width: 100px;
+    height: auto;
+}
+#grid-container {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "main content aside"
+                         "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 20px;
+   
+  
+}
+body {
+    padding: 1rem;
+}
+
+header {
+    
+    grid-area: header;
+    
+    
+}
+
+main{
+    grid-area: main;
+    justify-content: center;
+    
+    
+    
+    
+}
+#section-content {
+   
+        grid-area: content;
+        text-align: center;
+        justify-content: center;
+        background-color: lightslategray;
+        font-family: 'Tiro Devanagari Hindi', serif;
+        font-size: 1.3rem;
+        
+    
+    
+}
+
+
+footer {
+    grid-area: footer;
+    
+}
+aside {
+    grid-area: aside;
+    
+    background-color: lightgray;
+    
+
+    
+}
+#mirror-aside{
+    grid-area: main;
+    background-color: lightgray;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    
+    
+}
+
+header nav ul li {
+    display: inline-block;
+    gap: 1rem;
+    
+    
+}
+
+
+
+
+
+main article{
+
+    flex-basis: 250px;
+    flex-grow: 1;
+    
+    
+    
+    background-color: lightgray;
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+footer{
+    background-color: rgb(80, 80, 80);
+    color: #fff;
+    padding: 3rem 2rem;
+}
+#header-pic {
+    background-image: url(images/space.jpg); 
+    /*https://pixabay.com/illustrations/universe-sky-stars-space-cosmos-2742113/*/
+    background-size: cover; 
+    font-family: 'Tiro Devanagari Hindi', serif;
+    
+    
+	
+}
+#aside-mid {
+    
+    text-align: center;
+    font-family: 'Tiro Devanagari Hindi', serif;
+   
+    
+    
+}
+#aside-mid ul{
+    display: inline-block;
+
+}
+#aside-mid ul li{
+    text-align: left;
+
+
+}
+
+.fa-solid.fa-bars{
+    color: red;
+}
+#menu a{
+    font-size: 1.5rem;
+    color: black;
+    margin: 7px;
+    
+}
+
+#cell {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background-color: lightblue;
+    
+}
+
+.kolon {
+    width: 100%;
+    
+}
+
+.rad {
+    margin: auto;
+    width: auto;
+    height: 3em;
+    border: 2px rgb(0, 0, 0) solid;
+    text-align: center;
+    
+    
+}
+
+.cellheadline {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.kolon p{
+    color: red;     
+   
+}
+
+.radbold {
+    margin: auto;
+    width: auto;
+    height: 3em;
+    border: 2px rgb(0, 0, 0) solid;
+    text-align: center;
+    font-weight:bold;
+    
+    
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px){
+    #grid-container{
+        display: grid;
+        grid-template-areas: "header header header"
+                             "main content aside"
+                             "footer footer footer";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto auto auto;
+    
+    }
+    
+    
+    
+   
+    #ham-icon{
+        display: none;
+        
+    }
+
+   
+
+}
+@media only screen and (max-width: 1025px){
+    #menu {
+        display: none;
+        
+    }
+    #stuff-left {
+        display: none;
+        justify-content: left;
+    }
+    #grid-container{
+        display: grid;
+        grid-template-areas: "header header header"
+                             "main content aside"
+                             "footer footer footer";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto auto auto;
+    
+    }
+    #menu{
+        position: absolute;
+        top:125px;
+        left: 0;    
+        background-color: lightblue;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+    #menu li{
+        list-style: none;
+    }
+    
+    #menu a{
+        color: white;
+        padding: 1rem 0;
+        display: inline-block;
+        font-size: 1.3rem;
+    }
+    
+   
+
+}
+@media only screen and (max-width: 850px) {
+    #grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                            "main"
+                            "content"
+                            "aside"
+                            "footer";
+    }
+    
+    #menu{
+        position: absolute;
+        top:125px;
+        left: 0;    
+        background-color: lightblue;
+        width: 100%;
+        padding: 1rem;
+    }
+    #menu li{
+        list-style: none;
+    }
+    
+    #menu a{
+        color: white;
+        padding: 1rem 0;
+        display: inline-block;
+        font-size: 1.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+    .cell {
+        display: flex;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        background-color: lightblue;
+        
+    }
+    
+    .kolon {
+        width: 100%;
+        
+    }
+    
+    .rad {
+        margin: auto;
+        width: auto;
+        height: 3em;
+        border: 2px rgb(0, 0, 0) solid;
+        text-align: center;
+        
+        
+    }
+    
+    .cellheadline {
+        width: 100%;
+        background-color: aquamarine;
+    }
+    
+    .kolon p{
+        color: rgb(0, 26, 255);     
+       
+    }
+    
+    .radbold {
+        margin: auto;
+        width: auto;
+        height: 3em;
+        border: 2px rgb(0, 0, 0) solid;
+        text-align: center;
+        font-weight:bold;
+        
+        
+    }
+
+
+
+
+
+
+
+
+}
